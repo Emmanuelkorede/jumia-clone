@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.log-in-form {
+  margin-top: 160px;
+  width: 100%;
+  max-width: 500px;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.logo-jumia img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.login-welcome h1 {
+  font-size: 22px;
+  color: #2d3436;
+  margin-bottom: 10px;
+}
+
+.login-welcome p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* Email Input */
+.email-form {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.email-form input {
+  width: 100%;
+  padding: 14px 10px;
+  border: 1.5px solid #b2bec3;
+  border-radius: 6px;
+  outline: none;
+  font-size: 15px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.email-form label {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  pointer-events: none;
+  transition: 0.3s ease;
+  font-size: 15px;
+  background: #fff;
+  padding: 0 5px;
+}
+
+.email-form input:focus,
+.email-form input:valid {
+  border-color: #f68b1e;
+}
+
+.email-form input:focus + label,
+.email-form input:valid + label {
+  top: -8px;
+  left: 10px;
+  font-size: 12px;
+  color: #f68b1e;
+}
+
+.contnuation-terms .continue-button {
+  width: 100%;
+  background-color: #f68b1e;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contnuation-terms .continue-button:hover {
+  background-color: #e67e22;
+}
+
+.contnuation-terms h2 {
+  font-size: 13px;
+  color: #555;
+  font-weight: normal;
+  margin-top: 15px;
+}
+
+.contnuation-terms a {
+  display: inline-block;
+  font-size: 13px;
+  color: #f68b1e;
+  margin: 4px 8px;
+  text-decoration: underline;
+}
+
+.other-login-options {
+  margin-top: 25px;
+}
+
+.other-login-options button {
+  width: 100%;
+  border-radius: 6px;
+  padding: 12px 0;
+  font-size: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.other-login-options .facebook {
+    background-color: blue;
+    font-weight: 600;
+    border: none;
+    color: white;
+}
+
+.fa-facebook {
+  color: #1877f2; 
+  background: #fff;
+  border-radius: 50%;
+  font-size: 22px;
+}
+
+.other-login-options .google{
+    background: transparent;
+    border: 1px solid #2d3436;
+    font-weight: 600;
+}
+
+.other-login-options .facebook:hover {
+    transform: scale(1.02);
+}
+
+.other-login-options .google:hover{
+    background-color: #888;
+}
+
+.form-footer {
+  margin-top: 25px;
+  font-size: 13px;
+  color: #777;
+  line-height: 1.4;
+}
+
+.form-footer a {
+  color: #f68b1e;
+  text-decoration: none;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
+
+.form-footer-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.form-footer-img img {
+  width: 100px;           
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.form-footer-img img:hover {
+  opacity: 1;
+}

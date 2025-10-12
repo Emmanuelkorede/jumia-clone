@@ -1,0 +1,126 @@
+.jumia-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  height: 72px;
+  padding: 0 20px;
+  border-bottom: 1px solid #eee;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* --- Left Logo --- */
+.left-side-heder {
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-side-heder img {
+  max-height: 60px;
+  width: auto;
+  cursor: pointer;
+}
+
+/* --- Middle Search --- */
+.middle-side-header {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 10px;
+  margin: 0 20px;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 14px;
+  flex: 1;
+  background: #fff;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  padding-left: 30px;
+  width: 100%;
+  font-size: 15px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  color: #888;
+  font-size: 16px;
+}
+
+.middle-side-header button {
+  background-color: darkorange;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.middle-side-header button:hover {
+  background-color: rgb(228, 126, 2);
+}
+
+/* --- Right Header Links --- */
+.right-side-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.right-side-header a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #000;
+  font-size: 1rem;
+  position: relative;
+}
+
+.right-side-header a:hover {
+  color: darkorange;
+}
+
+/* --- Cart Icon Badge --- */
+.cart-icon-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-icon-wrapper .right-icon {
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.cart-number {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: darkorange;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 50%;
+  line-height: 1;
+  min-width: 18px;
+  text-align: center;
+}

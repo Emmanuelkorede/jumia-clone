@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>jumia</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/juma-header.css">
+    <link rel="stylesheet" href="styles/checkout.css">
+  </head>
+  <body>
+
+    <div class="jumia-header">
+      <div class="left-side-heder">
+        <a href="juma.html">
+          <img src="images/jumia logo.png" alt="jumia-icon">
+        </a>
+      </div>
+
+      <div class="middle-side-header">
+        <div class="search-container">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" name="search" placeholder="Search products, brands and categories" class="search-input">
+        </div>
+        <button>Search</button>
+      </div>
+
+      <div class="right-side-header">
+        <a href="">
+          <i class="fa-solid fa-user right-icon"></i>
+          <span>Account</span>
+          <i class="fa-solid fa-angle-down"></i>
+        </a>
+
+        <a href="">
+          <i class="fa-solid fa-circle-info right-icon"></i>
+          <span>Help</span>
+          <i class="fa-solid fa-angle-down"></i>
+        </a>
+
+        <a href="checkout.html" class="cart-link">
+          <div class="cart-icon-wrapper">
+            <i class="fa-solid fa-cart-shopping right-icon"></i>
+            <span class="cart-number">0</span>
+          </div>
+          <span>Cart</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- main -->
+
+    <div class="checkout">
+      <div class="cart-display">
+        <div><h2 class="cart-total-quantity">Cart (<span class="total-items">1</span>)</h2></div>
+        <div class="js-cart-display"></div>
+      </div>
+
+      <div class="cart-summary">
+        <h2>Cart Summary</h2>
+        <div class="js-paymnet-summary">
+
+        </div>
+        
+      </div>
+
+    </div>
+<!-- <div class="summary-row">
+          <span>Subtotal</span>
+          <span class="cart-amount">$13,000</span>
+        </div>
+        <button class="checkout-button">Checkout ($13,000)</button> -->
+
+   
+  <script type="module" src="scripts/checout.js"></script>
+  </body>
+</html>

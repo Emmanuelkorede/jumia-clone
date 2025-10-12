@@ -1,0 +1,25 @@
+import { cart } from "../../data/cart.js";
+import { products } from "../../data/products.js";
+import  {formatNaira} from "../utils/money.js"
+
+ export function renderPaymentSummary() {
+  let paymentSummaryHtml = '' ;
+  let cartQuantity = 0;
+  let totalPrice = 0;
+
+  cart.forEach((cartItem) => {
+    const product = products.find(p => p.id === cartItem.productId);
+
+    cartQuantity += cartItem.quantity;
+    totalPrice += product.priceKobo * cartItem.quantity;
+
+    paymentSummaryHtml = `
+              <div class="summary-row">
+          <span>Subtotal</span>
+          <span class="cart-amount">${formatNaira(totalPrice)}</span>
+        </div>
+        <button class="checkout-button">Checkout (${formatNaira(totalPrice)})</button>` ;
+  });
+  document.querySelector('.js-paymnet-summary').innerHTML = paymentSummaryHtml ;
+
+}

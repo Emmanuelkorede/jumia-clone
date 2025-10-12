@@ -1,0 +1,181 @@
+.checkout {
+  padding-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.cart-display {
+  flex: 2;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.cart-total-quantity {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.checkout-card {
+  border: 1px solid #eee;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa;
+}
+
+.checkout-top-row {
+  display: flex;
+  gap: 16px;
+}
+
+.checkout-image {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.checkout-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.checkout-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.checkout-product-name {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.checkout-product-price {
+  font-size: 1.4rem;
+  color: #e67e22; /* a Jumia-like accent color */
+  font-weight: bold;
+}
+
+.checkout-actions {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #c0392b;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+}
+
+.remove-btn i {
+  font-size: 1.1rem;
+}
+
+.remove-btn:hover {
+  background-color: #f4a25b;
+  border-radius: 5px;
+  
+}
+
+.quantity-controls {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quantity-btn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.quantity-btn.decrease {
+    background-color: #333;
+}
+
+.quantity-btn.increase {
+    background-color: #e67e22;
+}
+
+.quantity-btn.increase {
+  background-color: #cf711d;
+}
+
+.quantity-btn i {
+  font-size: 1rem;
+    color: #fff;
+
+}
+
+.cart-quantity {
+  min-width: 24px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.cart-summary {
+  flex: 1;
+  max-width: 350px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  height: fit-content;
+}
+
+.cart-summary h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  font-size: 1.2rem;
+}
+
+.cart-amount {
+  font-weight: bold;
+  color: #e67e22;
+}
+
+.checkout-button {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #e67e22;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.checkout-button:hover {
+  background-color: #cf711d;
+}
