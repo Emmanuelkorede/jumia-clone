@@ -187,3 +187,7 @@ body {
 .form-footer-img img:hover {
   opacity: 1;
 }
+
+.notification-message {
+  color: red;
+}

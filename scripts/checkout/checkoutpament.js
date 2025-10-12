@@ -22,4 +22,10 @@ import  {formatNaira} from "../utils/money.js"
   });
   document.querySelector('.js-paymnet-summary').innerHTML = paymentSummaryHtml ;
 
+  document.querySelector('.checkout-button').addEventListener('click', ()=> {
+    setTimeout(() => {
+      window.location.href = "login.html" ;
+    }, 1000)
+  })
+
 }
