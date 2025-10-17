@@ -12,33 +12,75 @@
   </head>
   <body>
 
-    <div class="jumia-header">
+    <aside class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-header">
+        <div class="mobile-menu-title">Menu</div>
+        <button class="mobile-menu-close" aria-label="Close menu">Cancel</button>
+      </div>
+      <ul class="mobile-menu-list">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Categories</li>
+      </ul>
+    </aside>
+
+    <div class="mobile-overlay" aria-hidden="true"></div>
+
+    <header class="jumia-header">
+      <div class="hamburger-mobile" aria-hidden="true">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
       <div class="left-side-heder">
         <a href="juma.html">
-          <img src="images/jumia logo.png" alt="jumia-icon">
+          <img src="images/jumia logo.png" alt="jumia-icon" />
         </a>
       </div>
 
       <div class="middle-side-header">
         <div class="search-container">
           <i class="fa-solid fa-magnifying-glass search-icon"></i>
-          <input type="text" name="search" placeholder="Search products, brands and categories" class="search-input">
+          <input
+            type="text"
+            name="search"
+            placeholder="Search products, brands and categories"
+            class="search-input"
+          />
         </div>
-        <button>Search</button>
+        <button class="search-btn">Search</button>
       </div>
 
       <div class="right-side-header">
-        <a href="">
-          <i class="fa-solid fa-user right-icon"></i>
-          <span>Account</span>
-          <i class="fa-solid fa-angle-down"></i>
-        </a>
+        <div class="dropdown-click account-dropdown">
+          <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            <i class="fa-solid fa-user right-icon"></i>
+            <span>Account</span>
+            <i class="fa-solid fa-angle-down"></i>
+          </a>
+          <div class="dropdown-panel" data-for="account" role="menu">
+            <p role="menuitem">My Account</p>
+            <p role="menuitem">My Orders</p>
+            <p role="menuitem">Inbox</p>
+            <p role="menuitem">Wishlist</p>
+            <p role="menuitem">Voucher</p>
+          </div>
+        </div>
 
-        <a href="">
-          <i class="fa-solid fa-circle-info right-icon"></i>
-          <span>Help</span>
-          <i class="fa-solid fa-angle-down"></i>
-        </a>
+        <div class="dropdown-click help-dropdown">
+          <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            <i class="fa-solid fa-circle-info right-icon"></i>
+            <span>Help</span>
+            <i class="fa-solid fa-angle-down"></i>
+          </a>
+          <div class="dropdown-panel" data-for="help" role="menu">
+            <p role="menuitem">Help Center</p>
+            <p role="menuitem">Place an order</p>
+            <p role="menuitem">Payment options</p>
+            <p role="menuitem">Track an order</p>
+            <p role="menuitem">Returns & Refunds</p>
+          </div>
+        </div>
 
         <a href="checkout.html" class="cart-link">
           <div class="cart-icon-wrapper">
@@ -48,9 +90,7 @@
           <span>Cart</span>
         </a>
       </div>
-    </div>
-
-    <!-- main -->
+    </header>
 
     <div class="checkout">
       <div class="cart-display">
@@ -67,13 +107,9 @@
       </div>
 
     </div>
-<!-- <div class="summary-row">
-          <span>Subtotal</span>
-          <span class="cart-amount">$13,000</span>
-        </div>
-        <button class="checkout-button">Checkout ($13,000)</button> -->
 
    
   <script type="module" src="scripts/checout.js"></script>
+      <script src="scripts/jumiaheader.js"></script>
   </body>
 </html>

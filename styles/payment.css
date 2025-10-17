@@ -1,0 +1,285 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+}
+
+.jumia-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 0 20px;
+  height: 72px;
+  border-bottom: 1px solid #eee;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header-left img {
+  height: 65px; 
+  object-fit: contain;
+}
+
+.header-center {
+  flex: 1;
+  text-align: center;
+}
+
+.payment-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-link {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #333;
+  text-decoration: none;
+  gap: 6px;
+}
+
+.header-link i {
+  color: #f68b1e; 
+  font-size: 1.1rem;
+}
+
+.payment-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 90px; 
+  padding: 0 20px;
+}
+
+.payment-details {
+  flex: 2;
+}
+
+.payment-summary {
+  flex: 1;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  max-height: 400px ;
+}
+
+.payment-step {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+}
+
+.step-icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.step-icon.done i {
+  color: #4CAF50; 
+}
+
+.step-icon.pending i {
+  color: #999;
+}
+
+.step-title {
+  flex: 1;
+  font-weight: 400;
+}
+
+.step-change {
+  font-size: 0.85rem;
+  color: rgb(5, 5, 82);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.step-change i {
+  font-size: 0.8rem;
+}
+
+.step-content {
+  margin-top: 10px;
+  padding-left: 28px;
+  color: #333;
+}
+
+.second-para {
+  font-size: 12px;
+    color: #555;
+}
+
+.step-content-payment {
+  border-bottom: 1px solid #ddd;
+  padding: 12px 0;
+}
+
+.radio {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  gap: 10px;
+  user-select: none;
+}
+
+.radio input[type="radio"] {
+  display: none;
+}
+
+.custom-radio {
+  width: 22px ;
+  height: 22px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  border: 2px solid #999;
+  position: relative;
+}
+
+.radio input[type="radio"]:checked +
+.custom-radio {
+  border-color: #f68b1e;
+  background-color: #f68b1e;
+  transform: scale(1.1);
+}
+
+.radio input[type="radio"]:checked +
+.custom-radio::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+
+.radio-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-heading {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.raido-label {
+  font-size: 14px;
+  color: #555;
+}
+
+.confirm-payment-method {
+  text-align: center;
+  border-radius: 3px;
+  color: #fff;
+  border: none;
+  background-color: #f68b1e;
+  padding: 14px 10px;
+  margin-top: 10px;
+  
+}
+
+.confirm-payment-method:hover {
+  background-color: #713a03;
+}
+
+
+.breakdown-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.02rem;
+  padding: 8px 0;
+}
+
+.breakdown-total.item {
+  border-top: 1px solid #ccc;
+}
+
+.breakdown-total.delivery {
+  border-bottom: 1px solid #ccc;
+}
+
+.breakdown-total.total {
+   border-bottom: 1px solid #ccc;
+}
+
+.all-total {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.code-container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding: 15px 0;
+}
+
+.code-box {
+  position: relative;
+}
+
+.code-box input {
+  width: 100%;
+  padding: 15px  12px ;
+  outline: none ;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.code-box label {
+  position: absolute;
+  font-size: 16px;
+  left: 12px;
+  top: 10px;
+  pointer-events: none;
+  color: #8e8b8b;
+  transition: 0.3s ease;
+}
+
+.code-box input:not(:placeholder-shown) + label ,
+.code-box input:focus + label {
+  opacity: 0;
+}
+
+.code-box input:focus {
+  border: 1px solid #f68b1e;
+}
+
+.confirm-order-btn {
+  margin: 10px 0;
+  padding: 15px 0;
+  width: 100%;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+}

@@ -14,7 +14,7 @@ body {
 }
 
 .log-in-form {
-  margin-top: 160px;
+  margin-top: 180px;
   width: 100%;
   max-width: 500px;
   padding: 40px 30px;
@@ -188,6 +188,6 @@ body {
   opacity: 1;
 }
 
-.notification-message {
+#notification-message {
   color: red;
 }

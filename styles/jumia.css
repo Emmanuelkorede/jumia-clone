@@ -33,7 +33,7 @@
 .product-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 👈 keeps image proportional but fills space */
+  object-fit: cover;
   display: block;
 }
 
@@ -42,7 +42,7 @@
   color: #333;
   margin: 10px 0 5px;
   font-weight: 500;
-  height: 38px; /* two-line limit look */
+  height: 38px; 
   overflow: hidden;
 }
 

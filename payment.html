@@ -1,58 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>jumia</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-      <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/juma-header.css">
-    <link rel="stylesheet" href="styles/jumia.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Jumia Payment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles/payment.css" />
   </head>
   <body>
-
-    <div class="jumia-header">
-      <div class="left-side-heder">
+    <header class="jumia-header">
+      <div class="header-left">
         <a href="juma.html">
-          <img src="images/jumia logo.png" alt="jumia-icon">
+          <img src="images/jumia logo.png" alt="Jumia Logo" />
         </a>
       </div>
 
-      <div class="middle-side-header">
-        <div class="search-container">
-          <i class="fa-solid fa-magnifying-glass search-icon"></i>
-          <input type="text" name="search" placeholder="Search products, brands and categories" class="search-input">
-        </div>
-        <button>Search</button>
+      <div class="header-center">
+        <div class="payment-name">Select payment</div>
       </div>
 
-      <div class="right-side-header">
-        <a href="">
-          <i class="fa-solid fa-user right-icon"></i>
-          <span>Account</span>
-          <i class="fa-solid fa-angle-down"></i>
+      <div class="header-right">
+        <a href="#" class="header-link">
+          <i class="fa-solid fa-headset"></i>
+          <span>Need Help <br> contact us</span>
         </a>
-
-        <a href="">
-          <i class="fa-solid fa-circle-info right-icon"></i>
-          <span>Help</span>
-          <i class="fa-solid fa-angle-down"></i>
+        <a href="#" class="header-link">
+          <i class="fa-solid fa-rotate-right"></i>
+          <span>Easy <br> Returns</span>
         </a>
+        <a href="#" class="header-link">
+          <i class="fa-solid fa-lock"></i>
+          <span>Secure <br> Payments</span>
+        </a>
+      </div>
+    </header>
 
-        <a href="checkout.html" class="cart-link">
-          <div class="cart-icon-wrapper">
-            <i class="fa-solid fa-cart-shopping right-icon"></i>
-            <span class="cart-number">0</span>
+    <main class="payment-container">
+      <section class="payment-details">
+        <div class="payment-step">
+          <div class="step-header">
+            <span class="step-icon done"><i class="fa-solid fa-circle-check"></i></span>
+            <span class="step-title">1. Customer Address</span>
+            <a href="#" class="step-change">
+                 Change
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
           </div>
-          <span>Cart</span>
-        </a>
-      </div>
-    </div>
+          <div class="step-content">
+            <p>Emmanuel Job</p>
+            <p class="second-para">25 Wuraola Alonge Street off K and S bus stop | Lagos - Ikotun | +234 9130333471</p>
+          </div>
+        </div>
 
+        <div class="payment-step">
+          <div class="step-header">
+            <span class="step-icon done"><i class="fa-solid fa-circle-check"></i></span>
+            <span class="step-title">2. Delivery Details</span>
+            <a href="#" class="step-change">
+                Change
+                <i class="fa-solid fa-chevron-right"></i> 
+            </a>
+          </div>
+          <div class="step-content">
+            <p>Door Delivery</p>
+            <p class="second-para">Delivery between 15 October and 17 October.</p>
+          </div>
+        </div>
 
+        <div class="payment-step">
+          <div class="step-header">
+            <span class="step-icon pending"><i class="fa-solid fa-circle"></i></span>
+            <span class="step-title">3. Payment Method</span>
+          </div>
+          <div class="step-content-payment">
+            <label class="radio">
+              <input type="radio" name="payment-method">
+              <span class="custom-radio"></span>
+              <div class="radio-content">
+                <span class="radio-heading">Payment Delivery </span>
+                <span class="raido-label">Go cashless : pay on delivery via bank transfer</span>
+              </div>
+            </label>
+          </div>
 
+          <div class="step-content-payment">
+            <label class="radio">
+              <input type="radio" name="payment-method">
+              <span class="custom-radio"></span>
+              <div class="radio-content">
+                <span class="radio-heading">Pre-pay now </span>
+                <span class="raido-label">Pay with Cards , Bank Transfer or USSD</span>
+              </div>
+            </label>
+          </div>
 
-  <script type="module" src=""></script>
+          <div class="step-content-payment">
+            <label class="radio">
+              <input type="radio" name="payment-method">
+              <span class="custom-radio"></span>
+              <div class="radio-content">
+                <span class="radio-heading">Palmpay </span>
+                <span class="raido-label">To use this method you must be registered with Palmpay</span>
+              </div>
+            </label>
+          </div>
+
+          <div class="step-content-payment">
+            <label class="radio">
+              <input type="radio" name="payment-method">
+              <span class="custom-radio"></span>
+              <div class="radio-content">
+                <span class="radio-heading">Opay </span>
+                <span class="raido-label">To use this method you must be registered with Opay</span>
+              </div>
+            </label>
+          </div>
+
+          <div class="step-content-payment">
+            <label class="radio">
+              <input type="radio" name="payment-method">
+              <span class="custom-radio"></span>
+              <div class="radio-content">
+                <span class="radio-heading">Buy Now Pay Later - EasyBuy </span>
+                <span class="raido-label">To use this method you must be registered with EasyBuy</span>
+              </div>
+            </label>
+          </div>
+          
+          <button class="confirm-payment-method">Confirm payment method</button>
+        </div>
+      </section>
+
+      <aside class="payment-summary">
+            <h2>Order summary</h2>
+            <div class="breakdown-total item">
+                <span>Item's total (2)</span>
+                <span>₦ 248,000</span>
+            </div>
+            <div class="breakdown-total delivery">
+                <span>Delivery fees</span>
+                <span>₦ 2,600</span>
+            </div>
+            <div class="breakdown-total total">
+                <span>Total</span>
+                <span class="all-total">₦ 2,600</span>
+            </div>
+            <div class="code-container">
+                <div class="code-box">
+                    <input type="password" placeholder=" ">
+                    <label for="password">Enter code here</label>
+                </div>
+                <span>Apply</span>
+            </div>
+            <button class="confirm-order-btn">Confirm order</button>
+      </aside>
+
+    </main>
+
+    <script type="module" src="scripts/payment.js"></script>
   </body>
 </html>
