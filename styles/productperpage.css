@@ -135,6 +135,40 @@
   line-height: 1.4;
 }
 
+.selected-delivery{
+    margin-top:10px; 
+    font-weight:500; 
+    color:#333 ;
+} 
+
+
+.pickup-details {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 300px;
+}
+
+.pickup-details input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#save-pickup-details {
+  background: #ff9900;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#save-pickup-details:hover {
+  background: #e68900;
+}
+
+
 @media (max-width: 950px) {
   .main {
     flex-direction: column;

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles/juma-header.css" />
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/productperpage.css">
+    <script src="https://unpkg.com/dayjs@1.11.10/dayjs.min.js"></script>
   </head>
 
   <body>
@@ -98,34 +99,63 @@
     <main class="main">
       <div class="product-perpage js-product-perpage"></div>
 
-    <div class="delivery-section">
-      <h4>DELIVERY & RETURNS</h4>
+      <div class="delivery-section">
+        <h4>DELIVERY & RETURNS</h4>
 
-      <div class="choose-location">
-        <label for="location">Choose your location</label>
-        <select id="state">
-          <option>Lagos</option>
-          <option>Abuja</option>
-          <option>Port Harcourt</option>
-        </select>
+        <div class="choose-location">
+          <label for="location">Choose your location</label>
+          <select id="state">
+            <option>Lagos</option>
+            <option>Abuja</option>
+            <option>Port Harcourt</option>
+          </select>
 
-        <select id="area">
-          <option>Ikotun</option>
-          <option>Ikeja</option>
-          <option>Yaba</option>
-        </select>
+          <select id="area">
+            <option>Ikotun</option>
+            <option>Ikeja</option>
+            <option>Yaba</option>
+          </select>
+        </div>
+
+        <div class="delivery-method pickup">
+          <label>
+            <input type="radio" name="deliveryType" value="pickup" checked>
+            <h5>Pickup Station</h5>
+          </label>
+          <p>Delivery Fee: <span class="fee">₦500</span><br>
+            Ready for pickup between 
+            <span class="delivery-date"></span>-<span class="delivery-date"></span> 
+            <span class="delivery-month"></span>
+          </p>
+        </div>
+
+        <div class="delivery-method door">
+          <label>
+            <input type="radio" name="deliveryType" value="door">
+            <h5>Door Delivery</h5>
+          </label>
+          <p>Delivery Fee: <span class="fee">₦1000</span><br>
+            Ready for delivery between 
+            <span class="delivery-date"></span>-<span class="delivery-date"></span> 
+            <span class="delivery-month"></span>
+          </p>
+        </div>
+
+        <p class="selected-delivery" ></p>
+
+        <div class="pickup-details">
+          <label for="pickup-name">Full Name</label>
+          <input type="text" id="pickup-name" placeholder="Enter your full name">
+
+          <label for="pickup-address">Pickup Address</label>
+          <input type="text" id="pickup-address" placeholder="Enter pickup address">
+
+          <button id="save-pickup-details">Save Details</button>
+          <p class="save-message" style="color:green; display:none;">Details saved!</p>
+        </div>
+
       </div>
 
-      <div class="delivery-method pickup">
-        <h5>Pickup Station</h5>
-        <p>Delivery Fees ₦5,250<br>Ready for pickup between 05–07 November</p>
-      </div>
-
-      <div class="delivery-method door">
-        <h5>Door Delivery</h5>
-        <p>Delivery Fees ₦5,600<br>Ready for delivery between 05–07 November</p>
-      </div>
-  </div>
     </main>
 
     <script type="module" src="scripts/productperPage.js"></script>

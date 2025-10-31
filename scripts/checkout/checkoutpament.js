@@ -4,7 +4,7 @@ import  {formatNaira} from "../utils/money.js"
 
  export function renderPaymentSummary() {
   const paymentSummaryEl = document.querySelector('.js-payment-summary');
-  if (!paymentSummaryEl) return; // prevent crash if missing
+  if (!paymentSummaryEl) return; 
 
   let cartQuantity = 0;
   let totalPrice = 0;
