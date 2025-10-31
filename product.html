@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>jumia</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/juma-header.css">
-    <link rel="stylesheet" href="styles/checkout.css">
-  </head>
-  <body>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jumia</title>
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/juma-header.css" />
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/productperpage.css">
+  </head>
+
+  <body>
     <aside class="mobile-menu" aria-hidden="true">
       <div class="mobile-menu-header">
         <div class="mobile-menu-title">Menu</div>
@@ -92,24 +95,40 @@
       </div>
     </header>
 
-    <div class="checkout">
-      <div class="cart-display">
-        <div><h2 class="cart-total-quantity">Cart (<span class="total-items">1</span>)</h2></div>
-        <div class="js-cart-display"></div>
+    <main class="main">
+      <div class="product-perpage js-product-perpage"></div>
+
+    <div class="delivery-section">
+      <h4>DELIVERY & RETURNS</h4>
+
+      <div class="choose-location">
+        <label for="location">Choose your location</label>
+        <select id="state">
+          <option>Lagos</option>
+          <option>Abuja</option>
+          <option>Port Harcourt</option>
+        </select>
+
+        <select id="area">
+          <option>Ikotun</option>
+          <option>Ikeja</option>
+          <option>Yaba</option>
+        </select>
       </div>
 
-      <div class="cart-summary">
-        <h2>Cart Summary</h2>
-        <div class="js-payment-summary">
-
-        </div>
-        
+      <div class="delivery-method pickup">
+        <h5>Pickup Station</h5>
+        <p>Delivery Fees ₦5,250<br>Ready for pickup between 05–07 November</p>
       </div>
 
-    </div>
+      <div class="delivery-method door">
+        <h5>Door Delivery</h5>
+        <p>Delivery Fees ₦5,600<br>Ready for delivery between 05–07 November</p>
+      </div>
+  </div>
+    </main>
 
-   
-  <script type="module" src="scripts/checout.js"></script>
-      <script src="scripts/jumiaheader.js"></script>
+    <script type="module" src="scripts/productperPage.js"></script>
+    <script src="scripts/jumiaheader.js"></script>
   </body>
 </html>

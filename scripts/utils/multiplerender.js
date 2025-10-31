@@ -5,8 +5,18 @@ import { renderCheckoutQuantity } from "../checkout/checkoutcart.js";
 
 
 export function multipleRenderFuntion() {
-    renderOrderSumary() ;
+  if (document.querySelector('.js-cart-display')) {
+    renderOrderSumary();
+  }
+
+  if (document.querySelector('.js-payment-summary')) {
     renderPaymentSummary();
-    updateCartQuantity() ;
-    renderCheckoutQuantity() ;
-} 
+  }
+
+  updateCartQuantity();
+  
+  if (document.querySelector('.total-items')) {
+    renderCheckoutQuantity();
+  }
+
+}

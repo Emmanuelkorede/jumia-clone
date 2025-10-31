@@ -1,0 +1,156 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 80px 5%;
+  background-color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.product-perpage {
+  flex: 1.2;
+  display: flex;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.viewed-product {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+
+.product-image {
+  flex: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8f8f8;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.product-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.rating img {
+  height: 18px;
+}
+
+.rating span {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.price {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #d32f2f;
+  margin: 15px 0;
+}
+
+.add-to-cart-btn {
+  background-color: #f68b1e;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+  width: 100%;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #e57a11;
+}
+
+.delivery-section {
+  flex: 0.7;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  position: sticky;
+  top: 100px;
+}
+
+.delivery-section h4 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.delivery-section .choose-location {
+  margin-bottom: 15px;
+}
+
+.delivery-section select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  margin: 10px;
+}
+
+.delivery-method {
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+  margin-top: 12px;
+}
+
+.delivery-method h5 {
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.delivery-method p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+@media (max-width: 950px) {
+  .main {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .product-perpage,
+  .delivery-section {
+    width: 100%;
+  }
+
+  .viewed-product {
+    flex-direction: column;
+  }
+
+  .delivery-section {
+    position: static;
+  }
+}

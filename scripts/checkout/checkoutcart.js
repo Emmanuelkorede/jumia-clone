@@ -4,13 +4,15 @@ import { products } from "../../data/products.js";
 import { formatNaira } from "../utils/money.js";
 import { multipleRenderFuntion } from "../utils/multiplerender.js";
 
- export function renderOrderSumary() {
+export function renderOrderSumary() {
+  const cartDisplay = document.querySelector('.js-cart-display');
+  if (!cartDisplay) return; 
+
   let cartsummaryHtml = '';
 
   cart.forEach((cartItem) => {
     const productId = cartItem.productId;
     const matchingProduct = products.find((product) => product.id === productId);
-
 
     cartsummaryHtml += `
       <div class="checkout-card" data-product-id="${cartItem.productId}">
@@ -43,7 +45,7 @@ import { multipleRenderFuntion } from "../utils/multiplerender.js";
     `;
   });
 
-  document.querySelector('.js-cart-display').innerHTML = cartsummaryHtml;
+  cartDisplay.innerHTML = cartsummaryHtml;
 
   renderCheckoutQuantity();
 
@@ -51,35 +53,36 @@ import { multipleRenderFuntion } from "../utils/multiplerender.js";
     deleteBtn.addEventListener('click', () => {
       const productId = deleteBtn.dataset.productId;
       removeFromCart(productId);
-
-        multipleRenderFuntion() ;
+      multipleRenderFuntion();
     });
   });
 
   document.querySelectorAll('.js-increase-button').forEach((increaseBtn) => {
     increaseBtn.addEventListener('click', () => {
-      const productId = increaseBtn.dataset.productId ;
-      increaseCartQuantity(productId) ;
-
-      multipleRenderFuntion() ;
-    }) ;
-  }) ;
+      const productId = increaseBtn.dataset.productId;
+      increaseCartQuantity(productId);
+      multipleRenderFuntion();
+    });
+  });
 
   document.querySelectorAll('.js-decrease-button').forEach((decreaseBtn) => {
     decreaseBtn.addEventListener('click', () => {
-      const productId = decreaseBtn.dataset.productId ;
-      decreaseCartQuantity(productId) ;
-
-      multipleRenderFuntion() ;
-    }) ;
-  }) ;
-
+      const productId = decreaseBtn.dataset.productId;
+      decreaseCartQuantity(productId);
+      multipleRenderFuntion();
+    });
+  });
 }
 
  export function renderCheckoutQuantity() {
+  const totalItemsEl = document.querySelector('.total-items');
+  if (!totalItemsEl) return; 
+
   let cartQuantity = 0;
   cart.forEach((cartItem) => {
     cartQuantity += cartItem.quantity;
   });
-  document.querySelector('.total-items').innerHTML = cartQuantity;
+
+  totalItemsEl.innerHTML = cartQuantity;
 }
+

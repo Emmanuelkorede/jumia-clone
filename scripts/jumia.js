@@ -9,7 +9,7 @@ function renderProducts() {
 
     products.forEach((product) => {
         productsHtml += `
-        <div class="products-card">
+        <div class="products-card" data-id="${product.id}">
             <div class="product-image">
                 <img src="${product.image}">
             </div>
@@ -20,19 +20,19 @@ function renderProducts() {
                 src="images/ratings/rating-${product.rating.stars * 10}.png">
                 <div class="product-rating-count link-primary">${product.rating.count}</div>
             </div>
-            <button class="add-to-cart js-add-to-cart" data-product-id="${product.id}">Add to cart</button>
             </div>
         ` ;
     }) ;
 
     document.querySelector('.js-product-display').innerHTML = productsHtml ;
 
-    document.querySelectorAll('.js-add-to-cart').forEach((addToCartBtn) => {
-        addToCartBtn.addEventListener('click' , () => {
-            const productId = addToCartBtn.dataset.productId ;
-            addToCart(productId) ;
-            updateCartQuantity() ;
-        }) ;
+
+    document.querySelector('.js-product-display').addEventListener('click' , (e) => {
+        const card = e.target.closest('.products-card') ;
+        if(card) {
+            const id = card.dataset.id ;
+            window.location.href = `product.html?id=${id}` ;
+        }
     }) ;
 
 }

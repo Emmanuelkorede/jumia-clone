@@ -68,17 +68,3 @@
   font-size: 13px;
   color: #777;
 }
-.add-to-cart {
-    background-color: #ff6600;
-    color: white;
-    font-weight: 600;
-    border: none;
-    text-align: center;
-    width: 100%;
-    border-radius: 5px;
-    padding: 15px 0;
-    margin-top: 15px;
-}
-.add-to-cart:hover {
-   background-color: rgb(228, 126, 2) ;
-}
