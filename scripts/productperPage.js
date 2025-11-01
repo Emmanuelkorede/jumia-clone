@@ -100,6 +100,15 @@ deliveryRadios.forEach(radio => {
   });
 });
 
+if (!localStorage.getItem('deliveryType')) {
+  const defaultDeliveryType = 'door';
+  const defaultFee = 1000;
+
+  localStorage.setItem('deliveryType', defaultDeliveryType);
+  localStorage.setItem('deliveryFee', defaultFee);
+}
+
+
 window.addEventListener('DOMContentLoaded', () => {
   const savedType = localStorage.getItem('deliveryType');
   const savedFee = localStorage.getItem('deliveryFee');
