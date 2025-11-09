@@ -64,7 +64,7 @@
 
 .checkout-product-price {
   font-size: 1.4rem;
-  color: #e67e22; /* a Jumia-like accent color */
+  color: #e67e22;
   font-weight: bold;
 }
 
@@ -178,4 +178,177 @@
 
 .checkout-button:hover {
   background-color: #cf711d;
+}
+
+
+
+@media (max-width: 992px) {
+  .checkout {
+    flex-direction: column;
+    align-items: center;
+    padding: 90px 20px 40px;
+    gap: 25px;
+  }
+
+  .cart-display,
+  .cart-summary {
+    width: 90%;
+    max-width: 700px;
+  }
+
+  .checkout-card {
+    flex-direction: column;
+  }
+
+  .checkout-top-row {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .checkout-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .checkout-product-name {
+    font-size: 1.1rem;
+  }
+
+  .checkout-product-price {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .checkout {
+    padding: 90px 15px 30px;
+    gap: 20px;
+  }
+
+  .cart-display,
+  .cart-summary {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .cart-summary {
+    order: 2;
+  }
+
+  .cart-total-quantity {
+    font-size: 1.3rem;
+  }
+
+  .checkout-card {
+    padding: 10px;
+  }
+
+  .checkout-image {
+    width: 90px;
+    height: 90px;
+  }
+
+  .checkout-product-name {
+    font-size: 1rem;
+  }
+
+  .checkout-product-price {
+    font-size: 1.2rem;
+  }
+
+  .remove-btn {
+    font-size: 0.9rem;
+  }
+
+  .quantity-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .checkout-button {
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkout {
+    flex-direction: column;
+    padding: 90px 10px 30px;
+    gap: 15px;
+  }
+
+  .cart-display,
+  .cart-summary {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .checkout-card {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .checkout-top-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .checkout-image {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+
+  .checkout-product-name {
+    font-size: 1rem;
+    margin-top: 8px;
+  }
+
+  .checkout-product-price {
+    font-size: 1.1rem;
+    margin-top: 4px;
+  }
+
+  .quantity-controls {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .remove-btn {
+    font-size: 0.9rem;
+    justify-content: center;
+  }
+
+  .summary-row {
+    font-size: 1rem;
+  }
+
+  .checkout-button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .checkout {
+    padding: 30px 8px 20px;
+  }
+
+  .checkout-card {
+    padding: 8px;
+  }
+
+  .checkout-product-name {
+    font-size: 0.95rem;
+  }
+
+  .checkout-product-price {
+    font-size: 1rem;
+  }
+
+  .checkout-button {
+    font-size: 0.95rem;
+  }
 }

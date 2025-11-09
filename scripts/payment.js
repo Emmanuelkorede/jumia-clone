@@ -159,7 +159,7 @@ function renderPaymentSummary() {
     errorText.style.display = "none";
     alert("🎉 Order confirmed successfully!");
     localStorage.clear();
-    window.location.href = "juma.html";
+    window.location.href = "index.html";
   });
 }
 

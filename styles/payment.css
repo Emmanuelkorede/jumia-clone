@@ -282,4 +282,174 @@ body {
   border: none;
   color: #fff;
   border-radius: 5px;
+  background-color: #f68b1e;
+}
+
+@media (max-width: 1200px) {
+  .jumia-header {
+    padding: 0 20px;
+  }
+
+  .header-right {
+    gap: 15px;
+  }
+
+  .payment-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .payment-details,
+  .payment-summary {
+    flex: 1;
+    max-width: 48%;
+  }
+}
+
+@media (max-width: 992px) {
+  .jumia-header {
+    padding: 0 15px;
+  }
+
+  .header-left img {
+    height: 60px;
+  }
+
+  .header-right {
+    gap: 12px;
+  }
+
+  .payment-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 0 15px;
+  }
+
+  .payment-details,
+  .payment-summary {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
+
+  .payment-summary {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .jumia-header {
+    height: 65px;
+    padding: 0 10px;
+  }
+
+  .header-left img {
+    height: 50px;
+  }
+
+  .header-center .payment-name {
+    font-size: 1rem;
+  }
+
+  .header-right {
+    gap: 8px;
+  }
+
+  .header-link {
+    font-size: 0.85rem;
+    gap: 5px;
+  }
+
+  .header-link i {
+    font-size: 1rem;
+  }
+
+  .payment-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .payment-details,
+  .payment-summary {
+    width: 95%;
+    max-width: 600px;
+  }
+
+  .confirm-payment-method,
+  .confirm-order-btn {
+    width: 100%;
+    font-size: 15px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .jumia-header {
+    padding: 0 8px;
+    height: 55px;
+  }
+
+  .header-left img {
+    height: 40px;
+  }
+
+  .header-center .payment-name {
+    font-size: 0.95rem;
+  }
+
+  .header-right {
+    gap: 6px;
+  }
+
+  .header-link span {
+    display: none;
+  }
+
+  .header-link i {
+    font-size: 1.1rem;
+  }
+
+  .payment-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    padding: 0 10px;
+    gap: 15px;
+  }
+
+  .payment-details,
+  .payment-summary {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .confirm-payment-method,
+  .confirm-order-btn {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .header-left img {
+    height: 35px;
+  }
+
+  .header-link i {
+    font-size: 1rem;
+  }
+
+  .payment-container {
+    padding: 0 5px;
+  }
+
+  .payment-details,
+  .payment-summary {
+    width: 100%;
+  }
 }
